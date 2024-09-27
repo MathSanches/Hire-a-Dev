@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireDev</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="menu-toggle" id="menuToggle">
+      &#9776;
+    </div>
+    <div class="logo">
+      <h1>Minha Logo</h1>
+    </div>
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><button>Home</button></li>
+        <li><button>Sobre</button></li>
+        <li><button>Serviços</button></li>
+        <li><button>Contato</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <div class="info-section">
+      <h1>Informações dos Programadores</h1>
+      <p>Abaixo estão os dados de contato enviados pelos programadores. A tabela será atualizada conforme as informações forem inseridas.</p>
+      
+      <table id="programmersTable">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Linguagens</th>
+          </tr>
+        </thead>
+        <tbody>
+            <?php include 'processa_dados.php'; ?>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="form-section">
+      <h2>Envie suas Informações</h2>
+      <form action="processa_dados.php" method="POST">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="dev">Desenvolvedor</label>
+        <input type="text" id="dev" name="dev" required>
+    
+        <button type="submit">Enviar</button>
+    </form>
+    
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-info">
+        <p>Desenvolvido por Matheus Mariano</p>
+        <p>Email: mmariano.job@gmail.com</p>
+        <p>Desenvolvedor Mobile | Back-end</p>
+    </div>
+    <div class="footer-links">
+        <a href="#" class="icon-link">
+            <img src="https://img.icons8.com/material-outlined/24/ffffff/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="#" class="icon-link">
+            <img src="https://img.icons8.com/material-outlined/24/ffffff/github.png" alt="GitHub" />
+        </a>
+        <a href="#" class="icon-link">
+            <img src="https://img.icons8.com/material-outlined/24/ffffff/instagram-new.png" alt="Instagram" />
+        </a>
+    </div>
+  </footer>
+
+  <script src="JS/scripts.js"></script>
+</body>
+</html>
